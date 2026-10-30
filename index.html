@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Shubham Kumar, Software Developer and QA Engineer at Expedify. AI-agent, CRM and WhatsApp workflow automation, React, FastAPI, Claude.">
+<meta name="description" content="Shubham Kumar, Software Developer and QA Engineer at Expedify. WhatsApp and CRM integrations with React, TypeScript, Next.js, Python and FastAPI. Open to SDE-1, full-stack and QA roles.">
 <link rel="canonical" href="https://shubham262004.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://shubham262004.github.io/">
 <meta property="og:site_name" content="Shubham Kumar">
 <meta property="og:title" content="Shubham Kumar - Software Developer & QA Engineer">
-<meta property="og:description" content="Builds the feature. Owns whether it works. AI-agent, CRM and WhatsApp workflow automation at Expedify. React, TypeScript, Python, FastAPI, Claude.">
+<meta property="og:description" content="Builds the feature. Owns whether it works. WhatsApp and CRM integrations at Expedify with React, TypeScript, Python and FastAPI. Open to SDE-1, full-stack and QA roles.">
 <meta property="og:image" content="https://shubham262004.github.io/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -18,9 +18,7 @@
 <meta name="twitter:title" content="Shubham Kumar - Software Developer & QA Engineer">
 <meta name="twitter:image" content="https://shubham262004.github.io/img/og.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%230A5CFF%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-family=%27Arial%27 font-weight=%27bold%27 font-size=%2716%27 fill=%27white%27 text-anchor=%27middle%27%3ESK%3C/text%3E%3C/svg%3E">
-</head>
-<body>
-<title>Shubham Kumar</title>
+<title>Shubham Kumar | Software Developer &amp; QA Engineer</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
 :root{
@@ -36,7 +34,8 @@
   --accent-soft:rgba(10,92,255,.08);
   --accent-2:#00C2FF;
   --purple:#7C3AED;
-  --grad:linear-gradient(92deg,#0A5CFF 0%,#2F8BFF 55%,#00C2FF 100%);
+  --grad:linear-gradient(92deg,#0A5CFF 0%,#2F8BFF 55%,#0E90D8 100%);
+  --grad-btn:linear-gradient(92deg,#0846C4 0%,#0A5CFF 60%,#0B5FE0 100%);
   --ok:#0F8A5F;
   --warn:#9A6700;
   --bad:#C0392B;
@@ -102,8 +101,8 @@ p{margin:0}
 .stats b{display:block; font-family:var(--display); font-weight:700; font-size:clamp(2rem,4vw,2.9rem); line-height:1; background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent; width:fit-content; padding-right:.08em; font-variant-numeric:tabular-nums}
 .stats span{display:block; margin-top:7px; font-family:var(--display); font-weight:600; font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted)}
 .hero::before{content:""; position:absolute; right:-12%; bottom:-34%; width:min(760px,90vw); aspect-ratio:1; border-radius:50%; background:radial-gradient(closest-side, var(--accent-soft), transparent 72%); z-index:0; pointer-events:none}
-.hero-visual{position:relative; display:grid; grid-template-columns:1fr; padding-bottom:88px}
-.hero-visual .portrait{grid-area:1/1; justify-self:end; width:min(320px,100%); height:auto; aspect-ratio:3/4; object-fit:cover; border-radius:26px; border:3px solid var(--accent); box-shadow:0 30px 80px rgba(10,92,255,.2); position:relative; z-index:1}
+.hero-visual{position:relative; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,300px); align-items:end; padding-bottom:0}
+.hero-visual .portrait{grid-area:1/2; justify-self:end; width:100%; height:auto; aspect-ratio:3/4; object-fit:cover; border-radius:26px; border:3px solid var(--accent); box-shadow:0 30px 80px rgba(10,92,255,.2); position:relative; z-index:1}
 .hero-visual::before, .hero-visual::after{content:""; position:absolute; width:min(340px,78%); aspect-ratio:1; border:2px solid var(--accent-2); border-radius:10px; right:-5%; top:-3%; transform:rotate(14deg); opacity:.55; z-index:0; pointer-events:none}
 .hero-visual::after{border-color:var(--purple); transform:rotate(-8deg); right:3%; top:14%; opacity:.4}
 .gauge{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:14px 16px; box-shadow:var(--shadow); font-family:var(--mono); font-size:11px; color:var(--muted)}
@@ -113,17 +112,20 @@ p{margin:0}
 .gauge .row i::after{content:""; display:block; height:100%; background:var(--grad); border-radius:99px; transform-origin:left; transform:scaleX(0); transition:transform 1s cubic-bezier(.2,.7,.2,1)}
 .gauge.on .row i::after{transform:scaleX(var(--s))}
 .gauge .row em{font-style:normal; color:var(--accent-ink); text-align:right}
-.hero-visual .gauge{grid-area:1/1; align-self:start; justify-self:start; z-index:2; width:min(236px,62%); transform:translate(0,36px)}
-.hero-visual .term{grid-area:1/1; align-self:end; justify-self:start; width:min(480px,96%); transform:translate(-4%,88px)}
-@media (max-width:900px){ .hero-visual{padding-bottom:0; gap:18px} .hero-visual .portrait{grid-area:auto; justify-self:start; width:min(300px,100%)} .hero-visual .term{grid-area:auto; width:100%; transform:none} .hero-visual .gauge{grid-area:auto; transform:none; width:100%} .hero-visual::before, .hero-visual::after{display:none} }
+.hero-visual .gauge{grid-area:1/1; align-self:end; justify-self:end; z-index:2; width:min(236px,100%); margin:0 18px 28px 0}
+.hero-visual .term{grid-area:2/1/3/3; justify-self:start; width:min(480px,100%); margin-top:18px}
+@media (min-width:901px) and (max-width:1199px){ .hero-visual{grid-template-columns:minmax(0,1fr)} .hero-visual .gauge{display:none} .hero-visual .portrait{grid-area:1/1; width:min(300px,100%)} .hero-visual .term{grid-area:2/1} }
+@media (max-width:900px){ .hero-visual{grid-template-columns:minmax(0,1fr); padding-bottom:0; gap:18px} .hero-visual .portrait{grid-area:auto; justify-self:start; width:min(300px,100%)} .hero-visual .term{grid-area:auto; width:100%; transform:none; margin:0} .hero-visual .gauge{grid-area:auto; transform:none; width:100%; margin:0; display:block} .hero-visual::before, .hero-visual::after{display:none} }
 .scroll-cue{position:absolute; left:50%; bottom:14px; transform:translateX(-50%); z-index:3; font-family:var(--display); font-weight:600; font-size:.7rem; letter-spacing:.22em; text-transform:uppercase; color:var(--muted); display:flex; flex-direction:column; align-items:center; gap:8px}
 .scroll-cue i{width:1px; height:36px; background:linear-gradient(var(--accent), transparent); display:block; animation:cue 1.8s ease-in-out infinite}
 @keyframes cue{0%,100%{opacity:.35; transform:translateY(0)} 50%{opacity:1; transform:translateY(6px)}}
 @media (max-width:900px){ .scroll-cue{display:none} }
 .btn{display:inline-flex; align-items:center; gap:8px; padding:11px 18px; border-radius:999px; border:1px solid var(--line-strong); color:var(--ink); background:var(--surface-solid); font-weight:500; font-size:.95rem; transition:border-color .2s, transform .2s}
 .btn:hover{text-decoration:none; border-color:var(--accent); transform:translateY(-1px)}
-.btn.primary{background:var(--grad); border-color:transparent; color:#fff; box-shadow:0 10px 26px rgba(10,92,255,.28)}
+.btn.primary{background:var(--grad-btn); border-color:transparent; color:#fff; box-shadow:0 10px 26px rgba(10,92,255,.28)}
 .btn.primary:hover{filter:brightness(1.06)}
+.avail{display:inline-flex; align-items:center; gap:9px; margin:18px 0 0; padding:7px 14px; border:1px solid var(--line); border-radius:14px; background:var(--surface-solid); font-size:.88rem; line-height:1.4; color:var(--ink); box-shadow:var(--shadow)}
+.avail i{width:8px; height:8px; border-radius:50%; background:var(--ok); box-shadow:0 0 0 3px rgba(15,138,95,.16); display:block; flex:none}
 
 /* rain (CSS only, hero band only) */
 .rain{position:absolute; inset:0; z-index:0; pointer-events:none; overflow:hidden;
@@ -142,6 +144,7 @@ p{margin:0}
 .chip:nth-child(6){display:none}
 @keyframes float{from{transform:translateY(-8px)} to{transform:translateY(12px)}}
 @media (max-width:900px){ .chip:nth-child(n+3){display:none} .chip:nth-child(2){left:auto; right:4%} }
+@media (max-width:560px){ .chip:nth-child(2){display:none} }
 
 /* terminal */
 .term{position:relative; z-index:2; background:var(--term-bg); color:var(--term-ink); border-radius:14px; border:1px solid rgba(142,197,255,.16); box-shadow:0 24px 60px rgba(11,18,32,.18); font-family:var(--mono); font-size:12.5px; line-height:1.55; overflow:hidden}
@@ -225,6 +228,10 @@ section{padding-block:clamp(56px,8vw,96px)}
 .nodes .n.agent i{background:var(--accent)}
 .nodes .n.qa i{background:var(--warn)}
 .nodes .arrow{color:var(--muted)}
+.beforeafter{display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:10px; margin-top:6px; font-family:var(--mono); font-size:.76rem; color:var(--muted)}
+.beforeafter div{border:1px solid var(--line); border-radius:8px; padding:9px 10px; background:var(--surface-solid); text-align:center}
+.beforeafter b{display:block; font-family:var(--display); font-size:1.35rem; line-height:1.15; color:var(--ink)}
+.beforeafter .after b{color:var(--ok)}
 
 /* projects */
 .feature{display:grid; grid-template-columns:1.15fr .85fr; border:1px solid var(--line); border-radius:18px; overflow:hidden; background:var(--surface); box-shadow:var(--shadow)}
@@ -303,6 +310,24 @@ footer .foot-row{display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:spa
   .track .st:last-child{color:var(--ok); border-color:var(--ok)}
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Shubham Kumar",
+  "url": "https://shubham262004.github.io/",
+  "image": "https://shubham262004.github.io/img/face.jpg",
+  "jobTitle": "Software Developer & QA Engineer",
+  "worksFor": {"@type": "Organization", "name": "Expedify", "url": "https://expedify.ai"},
+  "alumniOf": {"@type": "CollegeOrUniversity", "name": "Maharshi Dayanand University, Rohtak"},
+  "address": {"@type": "PostalAddress", "addressLocality": "Rohtak", "addressRegion": "Haryana", "addressCountry": "IN"},
+  "email": "mailto:shubhamkeshavkumar999@gmail.com",
+  "sameAs": ["https://www.linkedin.com/in/shubham-kumar-284473244/", "https://github.com/shubham262004"],
+  "knowsAbout": ["React", "TypeScript", "Next.js", "Python", "FastAPI", "PostgreSQL", "WhatsApp Business API", "Software testing"]
+}
+</script>
+</head>
+<body>
 
 <header class="nav">
   <div class="wrap">
@@ -334,16 +359,17 @@ footer .foot-row{display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:spa
       <p class="eyebrow">Software Developer &amp; QA Engineer | Expedify | Rohtak, India</p>
       <h1 id="h1">Hi, I&rsquo;m<br>Shubham.</h1>
       <p class="thesis">Builds the feature. Owns whether it works.</p>
-      <p class="sub">I build and test AI-agent, CRM and WhatsApp (Interakt) workflows for Expedify's revenue-stack SaaS: React and FastAPI on the surface, Claude, Celery and PostgreSQL underneath.</p>
+      <p class="sub">I build and test CRM features and WhatsApp integrations (Interakt, AiSensy) for Expedify's AI CRM: React and TypeScript on the surface, FastAPI, Celery and PostgreSQL underneath.</p>
+      <p class="avail"><i aria-hidden="true"></i>Open to SDE-1, full-stack and QA roles &middot; Delhi NCR or remote</p>
       <div class="cta">
         <a class="btn primary" href="#work">See the work</a>
         <a class="btn" href="https://github.com/shubham262004" target="_blank" rel="noopener">GitHub</a>
         <a class="btn" href="https://www.linkedin.com/in/shubham-kumar-284473244/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
       <div class="stats" aria-label="At a glance">
-        <div><b data-count="6">0</b><span>projects</span></div>
-        <div><b data-count="5">0</b><span>certificates</span></div>
-        <div><b id="months" data-count="8">0</b><span>months at Expedify</span></div>
+        <div><b data-count="6">6</b><span>projects</span></div>
+        <div><b data-count="8">8</b><span>certificates</span></div>
+        <div><b id="months" data-count="9">9</b><span>months at Expedify</span></div>
       </div>
     </div>
     <div class="hero-visual">
@@ -378,9 +404,9 @@ footer .foot-row{display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:spa
     </div>
     <div class="about">
       <div class="lead">
-        <img class="avatar" src="img/face.jpg" alt="Shubham Kumar" width="84" height="84">
+        <img class="avatar" loading="lazy" decoding="async" src="img/face.jpg" alt="Shubham Kumar" width="84" height="84">
         <div class="copy">
-          <p>I'm a Computer Science graduate (MDU Rohtak, 2021 to 2025). Since February 2026 I've been a Software Developer and QA Engineer at Expedify, an AI CRM and revenue-stack SaaS, working remotely from Rohtak for the Delhi team. I build features across the stack, from AI agents and workflow-automation nodes to CRM modules, WhatsApp (Interakt) integrations and analytics dashboards, and I test them myself before they ship.</p>
+          <p>I'm a Computer Science graduate (MDU Rohtak, 2021 to 2025). Since February 2026 I've been a Software Developer and QA Engineer at Expedify, an AI CRM and revenue-stack SaaS, working remotely from Rohtak for the Delhi team. I build features across the stack, from CRM modules and workflow-automation nodes to WhatsApp (Interakt and AiSensy) integrations and analytics screens, and I test them myself before they ship.</p>
           <p>Before that: a Laravel internship at Epik Technocravers, migrating WordPress sites to Laravel MVC. Before that: college projects around OCR and text-to-speech, and a couple of side builds I still maintain.</p>
           <p class="stance">Where I am: first year in production. What I bring: a feature is not done until its edge paths, retries and approval states are tested too.</p>
         </div>
@@ -405,10 +431,10 @@ footer .foot-row{display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:spa
       <p>Mostly the Expedify office in Delhi. Occasionally not.</p>
     </div>
     <div class="strip">
-      <figure><img src="img/strip-1.jpg" alt="Shubham leaning against a wall at the Expedify office" width="600" height="822"><figcaption>Expedify office, Delhi</figcaption></figure>
-      <figure><img src="img/strip-3.jpg" alt="Shubham in a suit at the Expedify office" width="600" height="822"><figcaption>Suit day</figcaption></figure>
-      <figure><img src="img/strip-4.jpg" alt="Shubham in a plaid shirt at the Expedify office" width="600" height="822"><figcaption>Between deploys</figcaption></figure>
-      <figure><img src="img/strip-5.jpg" alt="Shubham in a denim shirt beside the Expedify logo" width="600" height="822"><figcaption>By the Expedify logo</figcaption></figure>
+      <figure><img loading="lazy" decoding="async" src="img/strip-1.jpg" alt="Shubham leaning against a wall at the Expedify office" width="600" height="822"><figcaption>Expedify office, Delhi</figcaption></figure>
+      <figure><img loading="lazy" decoding="async" src="img/strip-3.jpg" alt="Shubham in a suit at the Expedify office" width="600" height="822"><figcaption>Suit day</figcaption></figure>
+      <figure><img loading="lazy" decoding="async" src="img/strip-4.jpg" alt="Shubham in a plaid shirt at the Expedify office" width="600" height="822"><figcaption>Between deploys</figcaption></figure>
+      <figure><img loading="lazy" decoding="async" src="img/strip-5.jpg" alt="Shubham in a denim shirt beside the Expedify logo" width="600" height="822"><figcaption>By the Expedify logo</figcaption></figure>
     </div>
   </div>
 </section>
@@ -417,7 +443,7 @@ footer .foot-row{display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:spa
   <div class="wrap">
     <div class="sec-head">
       <h2 id="work-h">Work at Expedify</h2>
-      <p><a href="https://expedify.ai" target="_blank" rel="noopener">Expedify</a> is an AI CRM and revenue stack: CRM, AI calling, WhatsApp, campaigns, workflows and dashboards in one system. Two pieces of 2026 work that show what the job actually is: integrations that have to stay in sync, and automation that has to be trusted.</p>
+      <p><a href="https://expedify.ai" target="_blank" rel="noopener">Expedify</a> is an AI CRM and revenue stack: CRM, AI calling, WhatsApp, campaigns, workflows and dashboards in one system. Four pieces of 2026 work that show what the job actually is: integrations that have to stay in sync, fixes that have to be proven, and pages that search engines can actually read.</p>
     </div>
     <div class="work-grid">
       <article class="panel">
@@ -435,11 +461,40 @@ footer .foot-row{display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:spa
       </article>
       <article class="panel">
         <span class="tag">Work at Expedify, 2026</span>
-        <h3>Claude-powered workflow nodes and voice agents</h3>
-        <p>Automation nodes that hand CRM data to Claude to classify, summarise or decide, then act on the result: update a deal, send a WhatsApp, or place an outbound call through a voice agent. Built in Expedify's workflow builder alongside the CRM modules and analytics dashboards they feed.</p>
-        <img class="shot-wide" src="img/builder-card.jpg" alt="Expedify workflow builder canvas: Click Trigger, Voice Outbound Call and Voice Agent nodes connected in sequence" width="780" height="240">
-        <p class="track-note">Every version is run through the builder's execution history before it ships; the QA path is written by the same person who wrote the feature.</p>
-        <div class="stack"><span>Claude API</span><span>Voice agents</span><span>Python</span><span>FastAPI</span><span>Redis</span><span>React</span><span>TypeScript</span></div>
+        <h3>AiSensy on Meta's Project API</h3>
+        <p>Extended Expedify's AiSensy WhatsApp integration with a Meta-compatible Project API client, so it behaves like the Interakt one: template sync and creation, two-way inbox messages through a webhook, and a live connection test.</p>
+        <div class="nodes" aria-label="AiSensy integration flow">
+          <span class="n"><i aria-hidden="true"></i>sync</span><span class="arrow" aria-hidden="true">&rarr;</span>
+          <span class="n"><i aria-hidden="true"></i>create</span><span class="arrow" aria-hidden="true">&rarr;</span>
+          <span class="n"><i aria-hidden="true"></i>inbox</span><span class="arrow" aria-hidden="true">&rarr;</span>
+          <span class="n qa"><i aria-hidden="true"></i>connection test</span>
+        </div>
+        <p class="track-note">Cleared 4 integration defects along the way, reproducing each one before fixing it.</p>
+        <div class="stack"><span>Python</span><span>FastAPI</span><span>Meta WhatsApp templates</span><span>Webhooks</span><span>React</span></div>
+      </article>
+      <article class="panel">
+        <span class="tag">Work at Expedify, 2026</span>
+        <h3>Making expedify.ai readable to search engines</h3>
+        <p>The Next.js marketing site was sending crawlers almost no text: an analytics provider and a theme provider held back the server-rendered page. I restored server-side rendering and gave 21 inner pages their own Open Graph and Twitter tags.</p>
+        <div class="beforeafter" aria-label="Homepage words visible to crawlers: 43 before the fix, 1,474 after">
+          <div><b>43</b>words before</div>
+          <span aria-hidden="true">&rarr;</span>
+          <div class="after"><b>1,474</b>words after</div>
+        </div>
+        <p class="track-note">Homepage text that search crawlers could read, before and after the fix.</p>
+        <div class="stack"><span>Next.js</span><span>React</span><span>TypeScript</span><span>SSR</span><span>Open Graph</span></div>
+      </article>
+      <article class="panel">
+        <span class="tag">Work at Expedify, 2026</span>
+        <h3>Proving a fix before it ships</h3>
+        <p>When I fixed 3 campaign bugs, I replayed 373 past campaigns to confirm nothing else changed. For access control, I audited about 540 API endpoints in 8 modules as a restricted role and automated the checks with a scripted harness.</p>
+        <div class="beforeafter" aria-label="373 past campaigns replayed; about 540 API endpoints audited">
+          <div><b>373</b>campaigns replayed</div>
+          <span aria-hidden="true">&middot;</span>
+          <div><b>~540</b>endpoints audited</div>
+        </div>
+        <p class="track-note">The campaign replay found zero regressions.</p>
+        <div class="stack"><span>Python</span><span>API testing</span><span>Regression testing</span><span>RBAC</span><span>PostgreSQL</span></div>
       </article>
     </div>
   </div>
@@ -452,7 +507,7 @@ footer .foot-row{display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:spa
       <p>Side builds and college work. The first two are on GitHub; the OCR projects predate my GitHub habit.</p>
     </div>
     <article class="feature">
-      <div class="shot"><img src="img/shubh-palace-card.jpg" alt="Shubh Palace home page: hero over a poolside villa with Book a Room and Reserve a Table buttons" width="1400" height="665"></div>
+      <div class="shot"><img loading="lazy" decoding="async" src="img/shubh-palace-card.jpg" alt="Shubh Palace home page: hero over a poolside villa with Book a Room and Reserve a Table buttons" width="1400" height="665"></div>
       <div class="body">
         <span class="tag muted">Side build, 2026</span>
         <h3>Shubh Palace</h3>
@@ -471,7 +526,7 @@ footer .foot-row{display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:spa
           <div class="stack"><span>Python</span><span>Claude API</span><span>faster-whisper</span><span>openWakeWord</span><span>PyQt6</span></div>
           <div class="links"><a href="https://github.com/shubham262004/jarvis" target="_blank" rel="noopener">Source on GitHub</a></div>
         </div>
-        <img class="shot-sm" src="img/jarvis-card.jpg" alt="Jarvis window: a glowing circular listening indicator while models load" width="332" height="400">
+        <img class="shot-sm" loading="lazy" decoding="async" src="img/jarvis-card.jpg" alt="Jarvis window: a glowing circular listening indicator while models load" width="332" height="400">
       </article>
       <article class="proj">
         <div class="top"><h3>AI document reader with voice output</h3><span class="year">2025</span></div>
@@ -503,7 +558,7 @@ footer .foot-row{display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:spa
   <div class="wrap">
     <div class="sec-head">
       <h2 id="exp-h">Experience</h2>
-      <p>Short so far, and honest about it. Dates are the only numbers here.</p>
+      <p>Short so far, and honest about it. Every number here was measured, not estimated.</p>
     </div>
     <div class="log">
       <div class="entry">
@@ -512,21 +567,27 @@ footer .foot-row{display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:spa
           <h3>Software Developer and QA Engineer</h3>
           <p class="org">Expedify, AI CRM and revenue-stack SaaS</p>
           <ul>
-            <li>Build and test features across the stack: AI agents (chat and voice), workflow-automation nodes, CRM modules, WhatsApp (Interakt) integrations and analytics dashboards.</li>
-            <li>Interakt WhatsApp template workflows: template creation, get and list APIs, approval sync and webhook events.</li>
-            <li>Claude-powered automation workflows that take manual steps out of product operations.</li>
-            <li>Hybrid dev and QA: write the feature, then write the tests that keep it working.</li>
+            <li>Built the Interakt WhatsApp Business integration end to end in FastAPI and React: API client, webhooks, delivery and read receipts, CRM contact sync, template approval sync and a real-time inbox.</li>
+            <li>Extended the AiSensy integration with a Meta-compatible Project API client for template sync and creation, two-way inbox messages and connection testing.</li>
+            <li>Fixed 3 campaign bugs and replayed 373 past campaigns to confirm zero regressions.</li>
+            <li>Audited role-based access across about 540 API endpoints in 8 modules as a restricted role, and automated the checks with a scripted harness.</li>
+            <li>Restored server-side rendering on the Next.js marketing site expedify.ai and added Open Graph tags to 21 pages.</li>
+            <li>Fixed timezone-aware date filters for Companies and Deals and 3 broken Task filters, across React and FastAPI.</li>
+            <li>Made Admin, CRM settings, Analytics and the public booking page work on phones, with before/after layout diffs proving desktop unchanged.</li>
+            <li>Client delivery: a responsive landing page and 8 HubSpot lead-capture forms for an enterprise workplace-design firm, and WhatsApp confirmations sent on every paid booking for a devotional-services platform.</li>
+            <li>Hybrid dev and QA: reproduce the bug live, fix it, then prove nothing else broke.</li>
           </ul>
         </div>
       </div>
       <div class="entry">
         <div class="when"><b>December 2025 to February 2026</b>Internship, remote</div>
         <div>
-          <h3>Laravel Developer Intern</h3>
+          <h3>Full-Stack Developer Intern (Laravel / PHP)</h3>
           <p class="org">Epik Technocravers Pvt Ltd</p>
           <ul>
             <li>Migrated PHP and WordPress sites (Comfort Innerwear, CBSE Adda) into Laravel applications with MVC structure.</li>
             <li>MySQL integration, performance and security improvements, frontend-to-backend wiring.</li>
+            <li>Built a Laravel app with secure login, role-based Admin and Student dashboards and middleware-protected routes.</li>
           </ul>
         </div>
       </div>
@@ -544,6 +605,7 @@ footer .foot-row{display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:spa
       <div class="group"><h3>Frontend</h3><ul>
         <li class="skill" data-level="3"><span class="dots"><i></i><i></i><i></i></span>React</li>
         <li class="skill" data-level="3"><span class="dots"><i></i><i></i><i></i></span>TypeScript</li>
+        <li class="skill" data-level="2"><span class="dots"><i></i><i></i><i></i></span>Next.js</li>
         <li class="skill" data-level="3"><span class="dots"><i></i><i></i><i></i></span>JavaScript</li>
         <li class="skill" data-level="3"><span class="dots"><i></i><i></i><i></i></span>HTML and CSS</li>
         <li class="skill" data-level="2"><span class="dots"><i></i><i></i><i></i></span>Tailwind, shadcn/ui</li>
@@ -557,17 +619,21 @@ footer .foot-row{display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:spa
         <li class="skill" data-level="2"><span class="dots"><i></i><i></i><i></i></span>Laravel</li>
         <li class="skill" data-level="2"><span class="dots"><i></i><i></i><i></i></span>PHP</li>
         <li class="skill" data-level="2"><span class="dots"><i></i><i></i><i></i></span>MySQL</li>
+        <li class="skill" data-level="2"><span class="dots"><i></i><i></i><i></i></span>AWS (EC2)</li>
+        <li class="skill" data-level="1"><span class="dots"><i></i><i></i><i></i></span>Docker, Kubernetes (GKE)</li>
       </ul></div>
       <div class="group"><h3>AI and automation</h3><ul>
-        <li class="skill" data-level="3"><span class="dots"><i></i><i></i><i></i></span>Claude API integration</li>
+        <li class="skill" data-level="1"><span class="dots"><i></i><i></i><i></i></span>Claude API (tool use)</li>
         <li class="skill" data-level="3"><span class="dots"><i></i><i></i><i></i></span>Workflow automation</li>
         <li class="skill" data-level="3"><span class="dots"><i></i><i></i><i></i></span>Interakt WhatsApp API</li>
+        <li class="skill" data-level="3"><span class="dots"><i></i><i></i><i></i></span>AiSensy, Meta WhatsApp templates</li>
         <li class="skill" data-level="2"><span class="dots"><i></i><i></i><i></i></span>Razorpay</li>
         <li class="skill" data-level="1"><span class="dots"><i></i><i></i><i></i></span>faster-whisper, openWakeWord</li>
       </ul></div>
       <div class="group"><h3>Quality and tooling</h3><ul>
-        <li class="skill" data-level="3"><span class="dots"><i></i><i></i><i></i></span>QA and testing</li>
+        <li class="skill" data-level="3"><span class="dots"><i></i><i></i><i></i></span>QA and testing (Jest, pytest, API tests)</li>
         <li class="skill" data-level="3"><span class="dots"><i></i><i></i><i></i></span>Git and GitHub</li>
+        <li class="skill" data-level="2"><span class="dots"><i></i><i></i><i></i></span>SEO: SSR, schema, Open Graph</li>
         <li class="skill" data-level="1"><span class="dots"><i></i><i></i><i></i></span>Firebase</li>
       </ul></div>
       <div class="group"><h3>Vision and voice</h3><ul>
@@ -588,7 +654,7 @@ footer .foot-row{display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:spa
   <div class="wrap">
     <div class="sec-head">
       <h2 id="edu-h">Education and training</h2>
-      <p>A CSE degree, plus the short courses that pulled me toward security and data along the way.</p>
+      <p>A CSE degree, cloud and AI certificates, and the short courses that pulled me toward security and data along the way.</p>
     </div>
     <div class="edu">
       <div>
@@ -599,9 +665,12 @@ footer .foot-row{display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:spa
       <div>
         <h3>Training and certificates</h3>
         <ul>
+          <li>Implement CI/CD Pipelines on Google Cloud<span>Google Cloud skill badge, December 2025</span></li>
+          <li>Manage Kubernetes in Google Cloud<span>Google Cloud skill badge, December 2025</span></li>
+          <li>Artificial Intelligence Fundamentals<span>IBM SkillsBuild, December 2025</span></li>
           <li>Cyber Security Malware Analyst Training<span>Employability.life with Federation University, Australia</span></li>
           <li>Cyber Security Training<span>Honeywell, ICT Academy</span></li>
-          <li>Core and Advanced Java<span>Anudeep Foundation</span></li>
+          <li>Core and Advanced Java<span>Anudip Foundation</span></li>
           <li>Data Analytics<span>Jobaaj</span></li>
           <li>Leadership Skills in Generative AI<span>NXT WAVE</span></li>
         </ul>
@@ -612,10 +681,11 @@ footer .foot-row{display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:spa
 
 <section id="contact" class="contact" aria-labelledby="contact-h">
   <div class="wrap">
-    <h2 id="contact-h">Working on something with workflows, agents or WhatsApp? Say hello.</h2>
-    <p>Email is fastest. I reply within a day, IST.</p>
+    <h2 id="contact-h">Hiring for a developer or QA role? Say hello.</h2>
+    <p>Open to Software Developer, full-stack, SDE-1 and QA roles: on-site or hybrid in Delhi NCR, or remote. Freelance CRM and WhatsApp workflow work is welcome too. Email is fastest. I reply within a day, IST.</p>
     <div class="links">
       <a class="btn primary" href="mailto:shubhamkeshavkumar999@gmail.com">shubhamkeshavkumar999@gmail.com</a>
+      <a class="btn" href="mailto:shubhamkeshavkumar999@gmail.com?subject=Resume%20request">Ask for my resume</a>
       <a class="btn" href="https://github.com/shubham262004" target="_blank" rel="noopener">GitHub</a>
       <a class="btn" href="https://www.linkedin.com/in/shubham-kumar-284473244/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
@@ -636,7 +706,7 @@ footer .foot-row{display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:spa
 <script>
 (function(){
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var d0 = new Date(), months = (d0.getFullYear() - 2026) * 12 + d0.getMonth(); if (months < 1) months = 1;
+  var months = Math.round((new Date() - new Date(2026, 1, 1)) / 2629746000); if (months < 1) months = 1;
   var mEl = document.getElementById('months'); if (mEl) mEl.setAttribute('data-count', months);
   document.querySelectorAll('.stats b').forEach(function(b){
     var n = +b.getAttribute('data-count') || 0;
@@ -670,7 +740,7 @@ footer .foot-row{display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:spa
     var retry = (n % 3 === 0);
     var L = [
       {k:'trigger',  m:'webhook  template.status'},
-      {k:'agent',    m:'claude  classify reply  intent=pricing'},
+      {k:'agent',    m:'llm  classify reply  intent=pricing'},
       {k:'crm',      m:'deal stage  qualified &rarr; proposal'},
       {k:'whatsapp', m:'send "pricing_followup_v2"'}
     ];
